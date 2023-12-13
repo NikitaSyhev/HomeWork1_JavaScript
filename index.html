@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Work 1. JS</title>
+</head>
+<body>
+    
+    <script>
+        alert('Task 1: ');
+        var num = +prompt('Введите число от 1 до 10 включительно: ');
+        if (num >=1 && num <=10) {
+            alert('True');
+        }
+        else {
+            alert('False');
+        }
+
+        alert('Task 2: '); 
+        var num1 = +prompt('Введите число 1 ( начало диапазона ): ');
+        var num2 = +prompt('Введите число 2 ( конец диапазона ): ');
+        for(let i = num1; i <= num2; ++i) {
+            if(Math.log2(i)%1==0)  {  
+            alert(`Число - степень двойки: ${i}`);
+            }
+        }
+
+        alert('Task 3: '); 
+       var result = 0;
+       var userNum = +prompt('Введите первое число:');
+       while(confirm('Хотите ввести еще число?')) {
+        result += +prompt('Введите число: ')
+       }
+       alert(`Сумма чисел равна: ${result + userNum} `);
+        
+
+        alert('Task 4: '); 
+        var message = prompt('Введите строку: ');
+        if(message.includes(' ') || message.includes('1')) {
+            var tmpStr = ' ';
+        for(let i = 0; i < message.length; ++i) {
+            if(message[i] != 1 && message[i] != ' ') {
+                tmpStr = tmpStr.concat(message[i]);
+            }
+        }
+        alert(`${tmpStr}`);
+        }
+        else {
+            alert('Строка без пробелов и единиц');
+        }
+       
+
+        alert('Task 5: ');
+        const array = [];
+        while (array.length < 10) {
+            const number = (Math.floor((Math.random() * 20) +1));
+            const getNumber = array.indexOf(number);
+            if(getNumber === -1 && number % 3 != 0) {
+                array.push(number);
+            }
+        } 
+        alert(`${array}`);
+            
+        
+    
+        
+    
+
+    </script>
+</body>
+</html> 
